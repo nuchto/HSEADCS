@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :portraits
+  resources :members
+  resources :groups
+  resources :projects
+  resources :people
   get 'welcome/index'
 
   get 'welcome/ineex'

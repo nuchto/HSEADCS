@@ -1,0 +1,47 @@
+<%= form_for(project) do |f| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :level %>
+    <%= f.number_field :level %>
+    <%#= select("project", "person_id", Members.all.collect {|member| [ member.name, member.id ]}, { include_blank: true })%>
+  </div>
+
+  <div class="field">
+    <%= f.label :person_id %>
+    <%#= f.number_field :group_id %>
+    <%= select("project", "person_id", Person.all.collect {|p| [ p.last_name, p.id ] }, { include_blank: true })%>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.label :group_id %>
+    <%#= f.number_field :group_id %>
+    <%= select("project", "group_id", Group.all.collect {|g| [ g.name, g.id ] }, { include_blank: true })%>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

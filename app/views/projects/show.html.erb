@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @project.level %>
+</p>
+<p>
+  <strong>Person:</strong>
+  <%= Person.find(@project.person_id).name %>
+</p>
+
+
+<p>
+  <strong>Group:</strong>
+  <%= Group.find(@project.group_id).name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

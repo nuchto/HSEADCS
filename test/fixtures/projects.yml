@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  level: 1
+  grop_id: 1
+  name: 
+  description: MyString
+
+two:
+  level: 1
+  grop_id: 1
+  name: 
+  description: MyString

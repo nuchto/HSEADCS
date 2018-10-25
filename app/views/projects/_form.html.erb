@@ -19,8 +19,13 @@
 
   <div class="field">
     <%= f.label :person_id %>
-    <%#= f.number_field :group_id %>
-    <%= select("project", "person_id", Person.all.collect {|p| [ p.last_name, p.id ] }, { include_blank: true })%>
+    <%#= f.text_field :person_id %>
+    <%= select("project", "person_id", People.all.collect {|person| [ person.last_name, person.id ] }, { include_blank: true })%>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
   </div>
 
 

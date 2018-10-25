@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Level</th>
-      <th>Person</th>
+      <th>Member</th>
       <th>Group</th>
       <th>Name</th>
       <th>Description</th>
@@ -17,10 +17,10 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr>
+        <td><%= project.name %></td>
         <td><%= project.level %></td>
         <td><%= project.person_id %></td>
         <td><%= project.group_id %></td>
-        <td><%= project.name %></td>
         <td><%= project.description %></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>

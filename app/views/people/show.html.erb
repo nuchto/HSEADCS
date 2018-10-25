@@ -1,18 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Group:</strong>
+  <string>Group:</string>
   <%= @person.group_id %>
 </p>
 
 <p>
-  <strong>First name:</strong>
+  <string>First name:</string>
   <%= @person.first_name %>
 </p>
 
 <p>
-  <strong>Last name:</strong>
+  <string>Last name:</string>
   <%= @person.last_name %>
+</p>
+
+<p>
+  <string>Project:</string>
+  <%= Project.find(@project.project_id).last_name %>
 </p>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |

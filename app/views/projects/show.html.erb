@@ -1,29 +1,34 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Level:</strong>
+  <string>Level:</string>
   <%= @project.level %>
 </p>
+
 <p>
-  <strong>Person:</strong>
-  <%= Person.find(@project.person_id).name %>
+  <string>Members:</string>
+  <%= Person.find(@project.person_id).last_name %>
 </p>
 
 
 <p>
-  <strong>Group:</strong>
+  <string>Group:</string>
   <%= Group.find(@project.group_id).name %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <string>Name:</string>
   <%= @project.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <string>Description:</string>
   <%= @project.description %>
 </p>
+<div>
+  <%= image_tag @project.image %>
+</div>
+
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

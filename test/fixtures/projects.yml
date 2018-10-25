@@ -2,12 +2,12 @@
 
 one:
   level: 1
-  grop_id: 1
-  name: 
+  name:
   description: MyString
 
 two:
   level: 1
-  grop_id: 1
-  name: 
+  group_id: 1
+  person_id: 1
+  name:
   description: MyString

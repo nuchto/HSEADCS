@@ -13,13 +13,13 @@
 
   <div class="field">
     <%= f.label :level %>
-    <%= f.number_field :level %>
+    <%= f.number_field :level, id: :project_level %>
     <%#= select("project", "person_id", Members.all.collect {|member| [ member.name, member.id ]}, { include_blank: true })%>
   </div>
 
   <div class="field">
     <%= f.label :person_id %>
-    <%#= f.number_field :group_id %>
+    <%= f.number_field :group_id, :project_person %>
     <%= select("project", "person_id", Person.all.collect {|p| [ p.last_name, p.id ] }, { include_blank: true })%>
   </div>
 
@@ -27,18 +27,23 @@
 
   <div class="field">
     <%= f.label :group_id %>
-    <%#= f.number_field :group_id %>
+    <%= f.number_field :group_id, id: :project_group_id %>
     <%= select("project", "group_id", Group.all.collect {|g| [ g.name, g.id ] }, { include_blank: true })%>
   </div>
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, id: :project_name %>
   </div>
 
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, id: :project_description %>
+  </div>
+
+  <div class="field">
+   <%= form.label :cover %>
+   <%= form.text_field :cover, id: :project_cover %>
   </div>
 
   <div class="actions">

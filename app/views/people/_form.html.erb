@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= f.label :group_id %>
-    <%= f.number_field :group_id %>
+    <%= f.number_field :group_id, id: :person_group_id  %>
   </div>
 
   <div class="field">
     <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, id: :person_first_name %>
   </div>
 
   <div class="field">
     <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, id: :person_last_name %>
   </div>
 
   <div class="actions">

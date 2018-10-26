@@ -20,6 +20,7 @@
   <div class="field">
     <%= f.label :person_id %>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <%#= f.text_field :person_id %>
     <%= select("project", "person_id", People.all.collect {|person| [ person.last_name, person.id ] }, { include_blank: true })%>
   </div>
@@ -28,6 +29,8 @@
     <%= f.label :image %>
     <%= f.file_field :image %>
 =======
+=======
+>>>>>>> aa7f5d30db12133912d7d060998521f9ac92642a
     <%= f.number_field :group_id, :project_person %>
     <%= select("project", "person_id", Person.all.collect {|p| [ p.last_name, p.id ] }, { include_blank: true })%>
 >>>>>>> aa7f5d30db12133912d7d060998521f9ac92642a

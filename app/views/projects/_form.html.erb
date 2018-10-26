@@ -21,16 +21,16 @@
     <%= f.label :person_id %>
 
     <%#= f.number_field :group_id, :project_person %>
-    <%= select("projects", "project_id", People.all.collect { |p| [p.last_name, p.id ] }, { include_blank: true })%>
+    <%= select("projects", "project_id", Person.all.collect { |p| [p.last_name, p.id ] }, { include_blank: true })%>
 
     <%#= f.text_field :person_id %>
-    <%= select("project", "person_id", People.all.collect {|person| [ person.last_name, person.id ] }, { include_blank: true })%>
+    <%= select("project", "person_id", Member.all.collect {|person| [ person.last_name, person.id ] }, { include_blank: true })%>
   </div>
 
   <div class="field">
     <%= f.label :image %>
     <%= f.file_field :image %>
-    <%= f.number_field :group_id, :project_person %>
+    <%#= f.number_field :group_id, :project_person %>
     <%= select("project", "person_id", Person.all.collect {|p| [ p.last_name, p.id ] }, { include_blank: true })%>
 
   </div>

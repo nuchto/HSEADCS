@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= f.label :project_id %>
-    <%= f.number_field :project_id %>
+    <%= f.number_field :project_id, id: :member_project_id %>
   </div>
 
   <div class="field">
     <%= f.label :person_id %>
-    <%= f.number_field :person_id %>
+    <%= f.number_field :person_id, id: :project_member_person_id %>
   </div>
 
   <div class="actions">

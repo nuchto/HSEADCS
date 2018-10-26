@@ -14,6 +14,15 @@
   <div class="field">
     <%= f.label :group_id %>
     <%= f.number_field :group_id, id: :person_group_id  %>
+<<<<<<< HEAD
+  </div>
+
+  <div class="field">
+    <%= f.label :project_id %>
+    <%#= f.text_field :person_id %>
+    <%= select("group_id", "project_id", Project.all.collect {|project| [ project.name, pproject.id ] }, { include_blank: true })%>
+=======
+>>>>>>> aa7f5d30db12133912d7d060998521f9ac92642a
   </div>
 
   <div class="field">

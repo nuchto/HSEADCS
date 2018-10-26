@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20181005111407) do
   end
 
   create_table "people", force: :cascade do |t|
-    t.integer  "project_id"
     t.integer  "group_id"
     t.string   "first_name"
     t.string   "last_name"
@@ -48,8 +47,8 @@ ActiveRecord::Schema.define(version: 20181005111407) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.integer  "person_id"
     t.integer  "level"
+    t.integer  "person_id"
     t.integer  "group_id"
     t.string   "name"
     t.string   "description"
